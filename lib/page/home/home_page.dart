@@ -42,7 +42,7 @@ class NewsHomePage extends StatelessWidget {
             image: new AssetImage(image),
             color: NewsColors.primaryTabValue,
           ),
-          new Text(text)],
+        ],
       ),
     );
   }

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:news_app/common/style/style.dart';
 import 'package:news_app/common/utils/navigator_utils.dart';
+import 'package:news_app/page/my/aboutNews_page.dart';
+import 'package:news_app/page/my/setting_page.dart';
 
 // import 'package:news_app/page/my/my_News_track.dart';
 // import 'package:news_app/page/my/my_box.dart';
@@ -91,13 +93,8 @@ class _NewsMyPageState extends State<NewsMyPage> {
   Widget build(BuildContext context) {
     Widget avatar = Image.asset('assets/images/avatar.jpg', width: 66.0);
     List<Widget> _items = [
-      // _renderItem(NewsICons.MY_MY_TASK, '我的任务', 1, MyTaskPage()),
-      // _renderItem(NewsICons.MY_MY_TRACK, '行善轨迹', 2, NewsTrackPage()),
-      // _renderItem(NewsICons.MY_MY_RANKING, '我的排名', 3, MyRankingPage()),
-      // _renderItem(NewsICons.MY_MY_BOX, '我的宝箱', 4, MyBox()),
-      // _renderItem(NewsICons.MY_MY_IMO, '我的imo+', 5, MyIMO()),
-      // _renderItem(NewsICons.MY_MY_DYNAMIC, '我的动态', 6, MyDynamicPage()),
-      // _renderItem(NewsICons.MY_MY_SETTING, '更多设置', 7, MySettingPage()),
+      _renderItem(NewsICons.MY_MY_DYNAMIC, '关于我们', 6, MyAboutNewsPage()),
+      _renderItem(NewsICons.MY_MY_SETTING, '更多设置', 7, MySettingPage()),
     ];
     return ListView(
       shrinkWrap: true,
@@ -129,7 +126,7 @@ class _NewsMyPageState extends State<NewsMyPage> {
                       bottom: 10.0,
                     ),
                     child: Text(
-                      '行小善',
+                      '观察者',
                       textScaleFactor: 1.5,
                       style: TextStyle(
                         color: Colors.white
@@ -139,7 +136,7 @@ class _NewsMyPageState extends State<NewsMyPage> {
                   Row(
                     children: <Widget>[
                       Text(
-                        '行善号: xingxiaoshan',
+                        'ID: watcher',
                         textScaleFactor: 1.2,
                         style: TextStyle(
                           color: Colors.white
@@ -154,11 +151,6 @@ class _NewsMyPageState extends State<NewsMyPage> {
         ),
         _items[0],
         _items[1],
-        _items[2],
-        _items[3],
-        _items[4],
-        _items[5],
-        _items[6],
       ],
     );
   }
