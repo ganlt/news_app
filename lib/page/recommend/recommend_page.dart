@@ -12,17 +12,17 @@ class NewsRecommendPage extends StatefulWidget {
 
 class _NewsRecommendPageState extends State<NewsRecommendPage> {
 
+  _renderItem() {
+    return Card(
+      child: Text('hello'),
+    );
+  }
   // final EdgeInsets _padding = MediaQuery.of(context).padding;
   @override
   Widget build(BuildContext context) {
-    return Column(
+    return ListView(
       children: <Widget>[
-        Container(
-          constraints: BoxConstraints.tightFor(height: 164.0),
-          decoration: BoxDecoration(
-            color: NewsColors.primarySwatch
-          ),
-        ),
+        _renderItem()
       ],
     );
   }
